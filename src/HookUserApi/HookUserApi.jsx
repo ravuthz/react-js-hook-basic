@@ -12,12 +12,9 @@ export default function HookUserApi() {
       .catch(err => setError(err));
   }, []);
 
-  if (error) {
-    return <div>Error: {error}</div>;
-  }
-
   return (
-    <div>
+    <div className="HookUserApi">
+      {error && <div className="ErrorMessage">{error}</div>}
       <ul>
         {data.map(item => (
           <li key={item.username}>
@@ -25,6 +22,12 @@ export default function HookUserApi() {
           </li>
         ))}
       </ul>
+      <details>
+        <summary>Debug JSON</summary>
+        <legend>
+          <pre>{JSON.stringify(data, null, 2)}</pre>
+        </legend>
+      </details>
     </div>
   );
 }

@@ -1,4 +1,22 @@
-.App {
+.App h1,
+.App h2 {
   font-family: sans-serif;
   text-align: center;
+}
+
+.HookUserApi {
+  color: lightseagreen;
+  background-color: whitesmoke;
+  border: 1px solid darkseagreen;
+}
+
+.HookUserApi .ErrorMessage {
+  color: lightcoral;
+}
+
+.HookUserApi summary,
+.HookUserApi pre {
+  border: 1px dotted;
+  padding: 1em;
+  margin: 10px;
 }
